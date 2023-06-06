@@ -1,0 +1,72 @@
+.note-container
+{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+
+.note-form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.notecard-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+
+.note-card
+{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 20px; 
+}
+
+  
+h1{
+    text-align: center;
+    font-size: 10vh;
+    margin: 2%;
+    color:rgb(113, 3, 113);
+}
+
+button{
+    float: right;
+    margin:2%;
+    font-size: 2vh;
+    background-color: blueviolet;
+}
+button:hover{
+    background-color:rgb(226, 43, 165);
+}
+.username{
+    background-color:rgba(192, 190, 190, 0.1);
+    margin:10%;
+    padding:2%;
+    border-radius: 20px; 
+}
+.username h2{
+    text-align: center;
+    font-size: 7vh;
+    padding:2%;
+    color:darkmagenta;
+}
+
+.note-header{
+    color:rgb(202, 9, 202);
+}
+

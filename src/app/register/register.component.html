@@ -1,0 +1,43 @@
+<div class="login-container">
+    <div class="login-form">
+      <form class="login-form" [formGroup]="regForm" (ngSubmit)="userRegister(regForm)">
+          <mat-form-field appearance="fill">
+              <mat-label>Input</mat-label>
+              <input matInput placeholder="UserName" 
+              formControlName ="uname" required minlength="3" >
+              <span *ngIf="uname && uname.invalid && (uname.dirty || uname.touched) && uname.errors?.['required'] " style="color:red;">Title is Mandatory!!</span><br>
+                    <span *ngIf="uname && uname.errors?.['minlength']" style="color:red;">Characters should be more than 5</span><br>
+                    <span *ngIf="uname && uname.errors?.['maxlength']" style="color:red;">Characters should be less than 50</span>
+  
+  
+            </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" 
+                formControlName="upass" required minlength="6">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+  
+                <span *ngIf="upass && upass.invalid && (upass.dirty || upass.touched) && upass.errors?.['required'] " style="color:red;">Title is Mandatory!!</span><br>
+                    <span *ngIf="upass && upass.errors?.['minlength']" style="color:red;">Characters should be more than 5</span><br>
+                    <span *ngIf="upass && upass.errors?.['maxlength']" style="color:red;">Characters should be less than 50</span>
+              </mat-form-field>
+              
+              <mat-form-field appearance="fill">
+                <mat-label>Rewrite your password</mat-label>
+                <input matInput [type]="hide1 ? 'password' : 'text'" placeholder="Password" formControlName="confirmPassword" required minlength="6">
+                <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+                  <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <button class="btn btn-primary">Register Now!</button>
+        </form>
+    </div>
+    <div *ngIf="isUsernameExists && isSubmitClicked" style="color:red; height:5%;"  >
+      <p>Username exist.</p>
+    </div>
+    <div *ngIf="isPassword" style="color:red; height:5%;"  >
+      <p>Password Do Not match.</p>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+
+<h1>Welcome {{ username }}<button (click)="routetonotes()">Add note</button><button (click)="routetologin()">Logout</button></h1>
+
+
+<div *ngIf="entries">
+    <div class="username"*ngFor = "let note of data; let i = index">  
+    <h2>{{users[i]}}</h2> 
+    <hr>
+  <div class="notecard-container">
+    <mat-card class="note-card" *ngFor="let item of note" >
+    <mat-card-header class="note-header">
+      <mat-card-title>{{ item.title }}</mat-card-title>
+    </mat-card-header>
+    <hr>
+      <mat-card-content>
+        <p>{{ item.text}}</p>
+      </mat-card-content>
+    </mat-card>
+    </div>
+    </div>
+    <hr>
+</div>

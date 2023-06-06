@@ -1,0 +1,59 @@
+
+
+<div class="login-container">
+
+    <div class="login-form">
+
+        <form class="login-form" #loginForm="ngForm" 
+        (submit)="userLogin(loginForm)"
+        >
+            
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter UserName</mat-label>
+
+              <input matInput type="text" placeholder="UserName" 
+               name="uname" #unameRef="ngModel" 
+               [(ngModel)]="uObj.uname" required minlength="3" >
+            
+
+               <small *ngIf="unameRef.invalid && (unameRef.dirty || unameRef.touched) && unameRef.errors?.['required'] " >
+                    userName is Required field !!!
+               </small>
+
+               <small *ngIf="unameRef.invalid && (unameRef.dirty || unameRef.touched) && unameRef.errors?.['minlength'] " >
+                userName must be of more than 3 characters !!!
+                </small>
+               
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter Password</mat-label>
+
+                <input matInput type="password" placeholder="Password" 
+                 name="upass" #upassRef="ngModel" 
+                 [(ngModel)]="uObj.upass" required minlength="6">
+      
+
+                 <small *ngIf="upassRef.invalid && (upassRef.dirty || upassRef.touched) && upassRef.errors?.['required'] " >
+                    user password is Required field !!!
+               </small>
+
+               <small *ngIf="upassRef.invalid && (upassRef.dirty || upassRef.touched) && upassRef.errors?.['minlength'] " >
+                user password must be of more than 6 characters !!!
+                </small>
+                 
+
+                </mat-form-field>
+        
+              <button class="btn btn-primary">Login!!!</button>
+        </form>
+    </div>
+    <div *ngIf="isUsernameExists && isSubmitClicked" style="color:red; height:5%;"  >
+        <p>Username Does NOT exist.</p> 
+    </div>
+    <div *ngIf="iswrongPassword" style="color:red; height:5%;"  >
+        <p>Wrong Password.</p> 
+    </div>
+    
+</div>

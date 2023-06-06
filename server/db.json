@@ -1,0 +1,89 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "username": "Prasad",
+      "password": "passwrd",
+      "entries": [
+        {
+          "title": "To do",
+          "text": "Breakfast\nLunch\nDinner"
+        },
+        {
+          "title": "AddNotes",
+          "text": "Testing 45"
+        },
+        {
+          "title": "AddNotes",
+          "text": "Testing 47"
+        },
+        {
+          "title": "I dont know",
+          "text": "Please"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Ganesh",
+      "password": "password",
+      "entries": [
+        {
+          "title": "Shopping List",
+          "text": "Milk\nEggs\nBread"
+        },
+        {
+          "title": "Meeting Notes",
+          "text": "Discuss project\nAssign tasks"
+        },
+        {
+          "title": "Added",
+          "text": "Testing 26"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "Nijai",
+      "password": "Prasad",
+      "entries": [
+        {
+          "title": "First Note",
+          "text": "Excited to check"
+        }
+      ]
+    },
+    {
+      "username": "ABCDE",
+      "password": "Prasad",
+      "entries": [],
+      "id": 4
+    },
+    {
+      "id": 5,
+      "username": "NewName",
+      "password": "NewName",
+      "entries": [
+        {
+          "title": "First Note",
+          "text": "Lets add"
+        },
+        {
+          "title": "Password",
+          "text": "Mine is not available"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "username": "admin",
+      "password": "admin@123",
+      "entries": [
+        {
+          "title": "Solved error",
+          "text": "Added username when the json was pushed."
+        }
+      ]
+    }
+  ]
+}
